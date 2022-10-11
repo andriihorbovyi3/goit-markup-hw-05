@@ -22,7 +22,7 @@
         <a href="./index.html" class="nav-logo link"><span class="nav-span">Web</span>Studio</a>
         <ul class="nav-list list">
           <li class="nav-list__item">
-            <a href="./index.html" class="nav-list__link nav active link">Студія</a>
+            <a href="./index.html" class="nav-list__link nav link" id="active">Студія</a>
           </li>
           <li class="nav-list__item">
             <a href="./portfolio.html" class="nav-list__link nav link">Портфоліо</a>
@@ -55,7 +55,7 @@
     <section class="section hero">
       <div class="container">
         <h1 class="hero__header">Ефективні рішення для вашого бізнесу</h1>
-        <button type="button" class="hero__button">Замовити послугу</button>
+        <button type="button" class="hero__button" data-modal-open>Замовити послугу</button>
       </div>
     </section>
 
@@ -115,12 +115,15 @@
         <ul class="work-list list">
           <li class="work-list__item">
             <img src="./images/work/imgone.jpg" alt="чоловік друкує на клавіатурі" width="370" />
+            <p class="work-text">Десктопні додатки</p>
           </li>
           <li class="work-list__item">
             <img src="./images/work/imgtwo.jpg" alt="ноутбук" width="370" />
+            <p class="work-text">Мобільні додатки</p>
           </li>
           <li class="work-list__item">
             <img src="./images/work/imgthree.jpg" alt="планшет" width="370" />
+            <p class="work-text">Дизайнерські рішення</p>
           </li>
         </ul>
       </div>
@@ -363,50 +366,51 @@
           <ul class="list">
             <li class="footer-list__item">
               <a href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80+%D0%9B%D0%B5%D1%81%D1%96+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D1%97%D0%B2,+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858"
-                class="footer-list__address f-nav link" target="_blank" rel="noopener noreferrer nofollow">м. Київ, пр-т
-                Лесі Українки, 26</a>
+                class="footer-list__address footer-nav link" target="_blank" rel="noopener noreferrer nofollow">м. Київ,
+                пр-т Лесі Українки, 26</a>
             </li>
             <li class="footer-list__item">
-              <a href="mailto:info@devstudio.com" class="footer-list__link f-nav link" lang="en">info@devstudio.com</a>
+              <a href="mailto:info@devstudio.com" class="footer-list__link footer-nav link"
+                lang="en">info@devstudio.com</a>
             </li>
             <li class="footer-list__item">
-              <a href="tel:+380961111111" class="footer-list__link f-nav link">+38 096 111 11 11</a>
+              <a href="tel:+380961111111" class="footer-list__link footer-nav link">+38 096 111 11 11</a>
             </li>
           </ul>
         </address>
       </div>
 
-      <div class="socials">
-        <p class="socials-text">приєднуйтесь</p>
-        <ul class="socials-list list">
-          <li class="socials-list__item">
-            <a href="https://instagram.com/" class="socials-list__link" target="_blank" rel="noopener noreferrer"
+      <div class="footer-socials">
+        <p class="footer-socials__text">приєднуйтесь</p>
+        <ul class="footer-socials__list list">
+          <li class="footer-socials-list__item">
+            <a href="https://instagram.com/" class="footer-socials-list__link" target="_blank" rel="noopener noreferrer"
               aria-label="Instagram">
-              <svg class="socials-icon" width="20" height="20">
+              <svg class="footer-socials__icon" width="20" height="20">
                 <use href="./images/icons.svg#instagram"></use>
               </svg>
             </a>
           </li>
           <li>
-            <a href="https://twitter.com/" class="socials-list__link" target="_blank" rel="noopener noreferrer"
+            <a href="https://twitter.com/" class="footer-socials-list__link" target="_blank" rel="noopener noreferrer"
               aria-label="twitter">
-              <svg class="socials-icon" width="20" height="20">
+              <svg class="footer-socials__icon" width="20" height="20">
                 <use href="./images/icons.svg#twitter"></use>
               </svg>
             </a>
           </li>
           <li>
-            <a href="https://facebook.com/" class="socials-list__link" target="_blank" rel="noopener noreferrer"
+            <a href="https://facebook.com/" class="footer-socials-list__link" target="_blank" rel="noopener noreferrer"
               aria-label="facebook">
-              <svg class="socials-icon" width="20" height="20">
+              <svg class="footer-socials__icon" width="20" height="20">
                 <use href="./images/icons.svg#facebook"></use>
               </svg>
             </a>
           </li>
           <li>
-            <a href="https://linkedincom/" class="socials-list__link" target="_blank" rel="noopener noreferrer"
+            <a href="https://linkedincom/" class="footer-socials-list__link" target="_blank" rel="noopener noreferrer"
               aria-label="linkedin">
-              <svg class="socials-icon" width="20" height="20">
+              <svg class="footer-socials__icon" width="20" height="20">
                 <use href="./images/icons.svg#linkedin"></use>
               </svg>
             </a>
@@ -415,6 +419,16 @@
       </div>
     </div>
   </footer>
+  <div class="backdrop backdrop-hidden" data-modal>
+    <div class="modal">
+      <button class="modal-btn" data-modal-close>
+        <svg width="18" height="18">
+          <use href="./images/icons.svg#cross"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
